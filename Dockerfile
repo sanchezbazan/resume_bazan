@@ -10,8 +10,14 @@ ENV PYTHONPATH=.
 ENV RESUME_CORE_SETTING_IN_DOCKER=true
 
 # Install dependencies
-RUN set -xe \
-    && apt-get update \
+# RUN set -xe \
+#     && apt-get update \
+#     && apt-get install -y --no-install-recommends build-essential \
+#     && pip install virtualenvwrapper poetry==1.4.2 \
+#     && apt-get clean \
+#     && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update \
     && apt-get install -y --no-install-recommends build-essential \
     && pip install virtualenvwrapper poetry==1.4.2 \
     && apt-get clean \
