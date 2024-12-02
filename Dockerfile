@@ -1,13 +1,13 @@
 # Use an official Python runtime as the base image
-FROM python:3.10.4-buster
+FROM python:3.10.8-buster
 
 # Set the working directory in the container
 WORKDIR /opt/project
 
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-ENV PYTHONPATH .
-ENV RESUME_CORE_SETTING_IN_DOCKER true
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=.
+ENV RESUME_CORE_SETTING_IN_DOCKER=true
 
 # Install dependencies
 RUN set -xe \
