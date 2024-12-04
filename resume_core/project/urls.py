@@ -18,9 +18,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
+# import resume_core.dashboards.urls
+
+API_PREFIX = 'api/'
+
 urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
     path('admin/', admin.site.urls),
+    path(API_PREFIX, include('resume_core.dashboards.urls')),
 ]
 
 if settings.DEBUG:

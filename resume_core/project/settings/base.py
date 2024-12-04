@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django_filters',
     'debug_toolbar',
     'storages',
+
+    # apps
+    'resume_core.dashboards.apps.DashboardsConfig',
 ]
 
 MIDDLEWARE = [
